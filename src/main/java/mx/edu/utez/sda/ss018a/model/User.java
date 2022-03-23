@@ -1,10 +1,19 @@
-package mx.edu.utez.sda.ss018a;
+package mx.edu.utez.sda.ss018a.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "users")
 public class User {
+    @Id
     private String username;
+
+    @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
     private Boolean enabled;
 
     public User() {
